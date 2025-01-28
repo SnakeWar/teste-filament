@@ -42,6 +42,13 @@ class TreatmentsRelationManager extends RelationManager
                     ->sortable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime(),
+            ])
+            ->actions([
+                Tables\Actions\EditAction::make(), // Ação para editar registros
+            ])
+            ->headerActions([
+                Tables\Actions\CreateAction::make(), // Botão para criar um novo registro
             ]);
     }
+
 }
